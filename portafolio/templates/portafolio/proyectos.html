@@ -1,0 +1,60 @@
+
+{% extends 'portafolio/base.html' %}
+{% load static %}
+
+{% block contenido %}
+
+<section class="contenedor pagina">
+    <span class="etiqueta">Aprender haciendo</span>
+
+    <h1>Mis proyectos</h1>
+
+    <p class="intro">Estos {{ cantidad }} son ejemplos de ejercicios de práctica para mi portafolio de estudiante. Los iré reemplazando por mis propios trabajos a medida que avance.</p>
+
+    <div class="filtros" aria-label="Filtrar proyectos">
+        <button class="filtro activo" data-filtro="todos" aria-pressed="true">Todos</button>
+        <button class="filtro" data-filtro="html" aria-pressed="false">HTML</button>
+        <button class="filtro" data-filtro="css" aria-pressed="false">CSS</button>
+        <button class="filtro" data-filtro="javascript" aria-pressed="false">JavaScript</button>
+    </div>
+
+    <div class="cuadricula proyectos">
+        <article class="tarjeta proyecto" data-tecnologias="html css">
+            <img src="{% static 'portafolio/img/proyecto1.jpg' %}" alt="Vista ilustrada de una página de presentación">
+
+            <div class="proyecto-cuerpo">
+                <span class="chip">HTML · CSS</span>
+                <h2>Conecta el Porvenir</h2>
+                <p>Objetivo principal
+Dar a conocer el catálogo de emprendimientos que se realizó dentro de la página web Conecta El Porvenir, para que más personas puedan conocer este espacio y los emprendedores que están iniciando sus negocios se animen a registrarse y compartir sus productos o servicios. Con esto se busca que más personas se unan, conozcan los diferentes emprendimientos y puedan apoyarlos para que sigan creciendo.</p>
+                <a href="https://github.com/adoniasroquel006-net" target="_blank" rel="noopener noreferrer">Ver perfil de GitHub ↗</a>
+            </div>
+        </article>
+
+        <article class="tarjeta proyecto" data-tecnologias="html css">
+            <img src="{% static 'portafolio/img/proyecto2.jpeg' %}" alt="Vista ilustrada de tarjetas de estudio">
+
+            <div class="proyecto-cuerpo">
+                <span class="chip">HTML · CSS</span>
+                <h2>Juego del TOTITO</h2>
+                <p>Mi objetivo principal es que cualquier persona, especialmente los niños que disfrutan de los juegos en línea, pueda divertirse con el juego de Totito. Sé que es algo sencillo y que se puede mejorar, pero es un buen comienzo para implementar más juegos y espacios de entretenimiento en la página web.</p>
+                <a href="https://github.com/adoniasroquel006-net" target="_blank" rel="noopener noreferrer">Ver perfil de GitHub ↗</a>
+            </div>
+        </article>
+
+        <article class="tarjeta proyecto" data-tecnologias="html css javascript">
+            <img src="{% static 'portafolio/img/proyecto3.png' %}" alt="Vista ilustrada de una lista de tareas">
+
+            <div class="proyecto-cuerpo">
+                <span class="chip">HTML · CSS · JavaScript</span>
+                <h2>Venta en linea de accesorios tecnologicos</h2>
+                <p>Mi objetivo principal es seguir desarrollando la venta de accesorios tecnológicos, una actividad que realizamos junto con los estudiantes de la Universidad Tecnológica de Panamá (UTP). Queremos continuar mejorando esta iniciativa para darla a conocer a más personas y lograr que siga creciendo.</p>
+                <a href="https://adoniasroquel006-netizen.github.io/techstore/" target="_blank" rel="noopener noreferrer">Ver perfil de GitHub ↗</a>
+            </div>
+        </article>
+    </div>
+
+    <p id="sin-resultados" class="nota" hidden>No hay proyectos con esta tecnología.</p>
+</section>
+
+{% endblock %}

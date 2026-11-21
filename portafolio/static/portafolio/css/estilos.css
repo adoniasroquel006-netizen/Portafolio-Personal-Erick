@@ -1,0 +1,530 @@
+
+/* Colores y fuentes de la guía de estilo */
+
+:root {
+    --verde: #2563eb;
+    --verde-oscuro: #153d8a;
+    --crema: #f4f8ff;
+    --texto: #16253e;
+    --acento: #70b8ff;
+    --blanco: #fff;
+    --fuente-titulo: 'Outfit', sans-serif;
+    --fuente-texto: 'Source Sans 3', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--crema);
+    color: var(--texto);
+    font: 16px/1.7 var(--fuente-texto);
+}
+
+a {
+    color: var(--verde-oscuro);
+}
+
+a:hover {
+    color: var(--verde);
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.contenedor {
+    width: min(1120px, calc(100% - 40px));
+    margin: auto;
+}
+
+.saltar {
+    position: absolute;
+    left: -9999px;
+}
+
+.saltar:focus {
+    left: 16px;
+    top: 16px;
+    background: white;
+    padding: 10px;
+    z-index: 5;
+}
+
+.cabecera {
+    background: rgba(244, 248, 255, .96);
+    border-bottom: 1px solid #dce6f5;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+}
+
+.marca {
+    font: 800 30px var(--fuente-titulo);
+    text-decoration: none;
+}
+
+.marca span {
+    color: var(--verde);
+}
+
+.menu {
+    display: flex;
+    gap: 26px;
+}
+
+.menu a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.menu-boton {
+    display: none;
+    border: 1px solid #ccd6ca;
+    background: white;
+    border-radius: 10px;
+    padding: 5px 13px;
+    font-size: 23px;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    align-items: center;
+    gap: 70px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.etiqueta {
+    display: inline-block;
+    background: #e0edff;
+    color: var(--verde-oscuro);
+    padding: 6px 15px;
+    border-radius: 99px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .02em;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--fuente-titulo);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(40px, 5vw, 64px);
+    letter-spacing: -.04em;
+    margin: 24px 0;
+}
+
+h1 span {
+    color: var(--verde);
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 23px;
+}
+
+.hero p,
+.intro {
+    font-size: 18px;
+    max-width: 650px;
+    color: #50627c;
+}
+
+.acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.boton {
+    display: inline-block;
+    background: var(--verde);
+    border: 2px solid var(--verde);
+    border-radius: 12px;
+    padding: 12px 23px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .2s;
+}
+
+.boton:hover {
+    background: var(--verde-oscuro);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.boton.secundario {
+    background: transparent;
+    color: var(--verde);
+}
+
+.boton.secundario:hover {
+    background: #e0edff;
+}
+
+.hero-ilustracion {
+    background: #dceaff;
+    border-radius: 36px;
+    padding: 25px;
+    transform: rotate(2deg);
+}
+
+.hero-ilustracion img {
+    width: 100%;
+    max-height: 330px;
+}
+
+.hero-ilustracion p {
+    text-align: center;
+    font-size: 14px;
+    margin: 0;
+}
+
+.bloque {
+    padding-bottom: 100px;
+}
+
+.seccion-titulo {
+    margin-bottom: 30px;
+}
+
+.cuadricula {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.cuadricula.dos {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 38px;
+}
+
+.tarjeta {
+    background: white;
+    border: 1px solid #dce6f5;
+    border-radius: 22px;
+    padding: 28px;
+    box-shadow: 0 8px 28px #153d8a10;
+}
+
+.tarjeta h2,
+.tarjeta h3 {
+    margin: 12px 0;
+}
+
+.tarjeta p {
+    color: #50627c;
+}
+
+.numero {
+    font-weight: 800;
+    color: var(--verde);
+    font-size: 20px;
+}
+
+.pagina {
+    min-height: 65vh;
+    padding-top: 80px;
+    padding-bottom: 110px;
+}
+
+.pagina h1 {
+    margin-top: 18px;
+}
+
+.texto-ancho {
+    max-width: 800px;
+    font-size: 18px;
+}
+
+.nota {
+    color: #65758b;
+    font-size: 14px;
+}
+
+.barra-nivel {
+    height: 9px;
+    background: #e0eaff;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.barra-nivel span {
+    display: block;
+    height: 100%;
+    background: var(--verde);
+    border-radius: 30px;
+}
+
+.filtros {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.filtro {
+    border: 1px solid #b9cbe5;
+    background: white;
+    padding: 9px 18px;
+    border-radius: 30px;
+    color: var(--verde-oscuro);
+}
+
+.filtro.activo,
+.filtro:hover {
+    background: var(--verde);
+    color: white;
+}
+
+.proyecto {
+    padding: 0;
+    overflow: hidden;
+}
+
+.proyecto img {
+    width: 100%;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    background: #dceaff;
+}
+
+.proyecto-cuerpo {
+    padding: 24px;
+}
+
+.proyecto h2 {
+    font-size: 22px;
+}
+
+.chip {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--verde);
+}
+
+.proyecto[hidden],
+#sin-resultados[hidden] {
+    display: none;
+}
+
+.contacto-caja {
+    max-width: 660px;
+    background: white;
+    border: 1px solid #dce6f5;
+    border-radius: 24px;
+    padding: 36px;
+    margin-top: 30px;
+}
+
+form {
+    display: grid;
+    gap: 9px;
+}
+
+form label {
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 1px solid #b9cbe5;
+    border-radius: 10px;
+    padding: 12px;
+    background: #fafdff;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: 2px solid var(--verde);
+    outline-offset: 2px;
+}
+
+form .boton {
+    justify-self: start;
+    margin-top: 14px;
+}
+
+#resultado {
+    font-weight: 600;
+}
+
+.error {
+    text-align: center;
+}
+
+.pie {
+    border-top: 1px solid #dce6f5;
+    padding: 28px 0;
+}
+
+.pie-fila {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 13px;
+    color: #65758b;
+}
+
+@media(max-width:760px) {
+    .barra {
+        min-height: 68px;
+    }
+
+    .menu-boton {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background: var(--crema);
+        padding: 20px;
+        box-shadow: 0 12px 20px #0001;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .menu.abierto {
+        display: flex;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 50px;
+        padding-bottom: 60px;
+        gap: 35px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .cuadricula,
+    .cuadricula.dos {
+        grid-template-columns: 1fr;
+    }
+
+    .pagina {
+        padding-top: 50px;
+        padding-bottom: 70px;
+    }
+
+    .contacto-caja {
+        padding: 22px;
+    }
+
+    .pie-fila {
+        flex-direction: column;
+    }
+
+    .bloque {
+        padding-bottom: 65px;
+    }
+}
+
+/* Personalizacion azul: detalles visuales sencillos */
+
+.hero-ilustracion {
+    transform: rotate(-2deg);
+    box-shadow: 0 18px 40px #2563eb17;
+}
+
+.tarjeta {
+    transition: transform .2s, box-shadow .2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px #153d8a14;
+}
+
+.marca {
+    letter-spacing: -.045em;
+}
+
+.etiqueta {
+    background: #dceaff;
+}
+
+.boton {
+    box-shadow: 0 5px 16px #2563eb1c;
+}
+
+@media(max-width:760px) {
+    .hero-ilustracion {
+        transform: none;
+    }
+}
+
+
+/* Fotografía personal de Erick */
+.hero-ilustracion img.foto-perfil {
+    width: 280px;
+    height: 280px;
+    max-width: 100%;
+    max-height: none;
+
+    border-radius: 50%;
+    border: 5px solid #2563eb;
+
+    object-fit: cover;
+    object-position: center 10%;
+
+    display: block;
+    margin: 0 auto;
+}
+
+/* Ajuste para celulares */
+@media (max-width: 760px) {
+    .hero-ilustracion img.foto-perfil {
+        width: 200px;
+        height: 200px;
+    }
+}

@@ -1,0 +1,35 @@
+
+{% extends 'portafolio/base.html' %}
+
+{% block contenido %}
+
+<section class="contenedor pagina">
+    <span class="etiqueta">Sigamos en contacto</span>
+
+    <h1>¿Hablamos?</h1>
+
+    <p class="intro">Me gusta conocer ideas y seguir aprendiendo. Puedes escribirme a <a href="mailto:{{ correo }}">{{ correo }}</a> o visitar mi <a href="https://github.com/adoniasroquel006-net" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+
+    <div class="contacto-caja">
+        <h2>Déjame un mensaje</h2>
+
+        <p class="nota">Este formulario es una demostración: valida los datos, pero no envía mensajes.</p>
+
+        <form id="formulario" novalidate>
+            <label for="nombre">Tu nombre</label>
+            <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+
+            <label for="correo">Tu correo</label>
+            <input id="correo" name="correo" type="email" autocomplete="email" required>
+
+            <label for="mensaje">Tu mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <button class="boton" type="submit">Revisar mensaje ↗</button>
+
+            <p id="resultado" role="status" aria-live="polite"></p>
+        </form>
+    </div>
+</section>
+
+{% endblock %}

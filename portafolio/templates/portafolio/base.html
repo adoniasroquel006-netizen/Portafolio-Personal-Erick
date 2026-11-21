@@ -1,0 +1,76 @@
+
+{% load static %}
+
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portafolio personal de Erick Obed Roquel Raxtún, estudiante de informática.">
+
+    <title>{{ titulo }} | Erick Obed Roquel Raxtún</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'portafolio/css/estilos.css' %}">
+</head>
+
+<body>
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+    <header class="cabecera">
+        <div class="contenedor barra">
+
+            <!-- Nombre completo del portafolio -->
+            <a class="marca" href="{% url 'portafolio:inicio' %}">
+                Erick Obed Roquel Raxtún<span>.</span>
+            </a>
+
+            <button class="menu-boton"
+                    id="menu-boton"
+                    type="button"
+                    aria-controls="menu"
+                    aria-expanded="false"
+                    aria-label="Abrir menú">☰</button>
+
+            <nav id="menu" class="menu" aria-label="Navegación principal">
+                <a href="{% url 'portafolio:inicio' %}">Inicio</a>
+                <a href="{% url 'portafolio:sobre_mi' %}">Sobre mí</a>
+                <a href="{% url 'portafolio:habilidades' %}">Habilidades</a>
+                <a href="{% url 'portafolio:proyectos' %}">Proyectos</a>
+                <a href="{% url 'portafolio:contacto' %}">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido">
+        {% block contenido %}{% endblock %}
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor pie-fila">
+
+            <span>
+                Hecho con paciencia y muchas ganas de aprender
+            </span>
+
+            <span>
+                © 2026 Erick Obed Roquel Raxtún ·
+                <a href="https://github.com/adoniasroquel006-net"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    GitHub
+                </a>
+            </span>
+
+        </div>
+    </footer>
+
+    <script src="{% static 'portafolio/js/main.js' %}" defer></script>
+</body>
+
+</html>

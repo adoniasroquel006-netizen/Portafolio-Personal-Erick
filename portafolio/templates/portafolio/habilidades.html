@@ -1,0 +1,42 @@
+
+{% extends 'portafolio/base.html' %}
+
+{% block contenido %}
+
+<section class="contenedor pagina">
+    <span class="etiqueta">Lo que voy aprendiendo</span>
+
+    <h1>Mis habilidades</h1>
+
+    <p class="intro">Todavía estoy dando mis primeros pasos. Estas son las tecnologías con las que he empezado a practicar; mis niveles son aproximados.</p>
+
+    <div class="cuadricula dos">
+        <article class="tarjeta">
+            <h2> Estructura web</h2>
+
+            <p><strong>HTML</strong> · {{ nivel }}</p>
+
+            <p>Organización de contenido, enlaces, imágenes, listas y formularios.</p>
+
+            <div class="barra-nivel">
+                <span style="width:45%"></span>
+            </div>
+        </article>
+
+        <article class="tarjeta">
+            <h2> Diseño web</h2>
+
+            <p><strong>CSS</strong> · {{ nivel }}</p>
+
+            <p>Colores, tipografías, espaciado, Flexbox y estilos para pantallas pequeñas.</p>
+
+            <div class="barra-nivel">
+                <span style="width:40%"></span>
+            </div>
+        </article>
+    </div>
+
+    <p class="nota">Próximamente quiero seguir aprendiendo JavaScript, Django y otras herramientas de programación web.</p>
+</section>
+
+{% endblock %}

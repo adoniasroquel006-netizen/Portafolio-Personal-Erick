@@ -1,0 +1,16 @@
+
+{% extends 'portafolio/base.html' %}
+
+{% block contenido %}
+
+<section class="contenedor pagina error">
+    <span class="etiqueta">Ups, parece que nos perdimos</span>
+
+    <h1>404 🌿</h1>
+
+    <p>Esta página no existe, pero siempre podemos volver a empezar.</p>
+
+    <a class="boton" href="{% url 'portafolio:inicio' %}">Volver al inicio</a>
+</section>
+
+{% endblock %}
